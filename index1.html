@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art Portfolio - Gemstone Gallery</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Open+Sans:wght@300;400;600&family=Kaushan+Script&family=Pinyon+Script&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="gemstone-styles.css">
+</head>
+<body>
+  
+  <!-- Curved Header Section -->
+  <header>
+    <div class="overlay">
+      <h1>Amanda Mann Fine Art</h1>
+      <h3>Featuring my work from Magic Tribe Studio</h3>
+      <p>Select a gemstone to explore different art categories</p>
+      <button onclick="scrollToGallery()">View Portfolio</button>
+    </div>
+  </header>
+
+  <!-- Gemstone Category Buttons Section -->
+  
+    
+    <div class="gemstone-nav">
+      
+      <!-- All Artwork - Crystal Quartz -->
+      <button class="gemstone-button active" data-category="all" data-stone="Crystal Quartz">
+        <img src="assets/crystalquartz.png" alt="Crystal Quartz">
+        <span class="button-label">All Artwork</span>
+      </button>
+
+      <!-- Digital Art - Opal (Rainbow) -->
+      <button class="gemstone-button" data-category="digital" data-stone="Rainbow Opal">
+        <img src="assets/opalbutton.png" alt="Rainbow Opal">
+        <span class="button-label">Digital Art</span>
+      </button>
+
+      <!-- Portraits - Pink Gemstone -->
+      <button class="gemstone-button" data-category="portraits" data-stone="Pink Tourmaline">
+        <img src="assets/opalbutton3.png" alt="Pink Gemstone">
+        <span class="button-label">Portraits</span>
+      </button>
+
+      <!-- Mixed Media - Rainbow Pink Opal -->
+      <button class="gemstone-button" data-category="mixed" data-stone="Fire Opal">
+        <img src="assets/opalbutton4.png" alt="Rainbow Pink Opal">
+        <span class="button-label">Mixed Media</span>
+      </button>
+
+      <!-- Abstract - Cosmic Opal -->
+      <button class="gemstone-button" data-category="abstract" data-stone="Cosmic Opal">
+        <img src="assets/opalbutton5.png" alt="Cosmic Opal">
+        <span class="button-label">Abstract</span>
+      </button>
+
+      <!-- Paintings - Dark Opal -->
+      <button class="gemstone-button" data-category="paintings" data-stone="Black Opal">
+        <img src="assets/opalbutton6.png" alt="Dark Opal">
+        <span class="button-label">Paintings</span>
+      </button>
+
+      <!-- Illustrations - Fire Opal -->
+      <button class="gemstone-button" data-category="illustrations" data-stone="Mexican Fire Opal">
+        <img src="assets/opalbutton7.png" alt="Fire Opal">
+        <span class="button-label">Illustrations</span>
+      </button>
+
+      <!-- Sketches - Jaspellite -->
+      <button class="gemstone-button" data-category="sketches" data-stone="Jaspellite">
+        <img src="assets/jaspellitebutton.png" alt="Jaspellite">
+        <span class="button-label">Sketches</span>
+      </button>
+
+      <!-- Black & White - Hematite -->
+      <button class="gemstone-button" data-category="bw" data-stone="Hematite">
+        <img src="assets/hematite.png" alt="Hematite">
+        <span class="button-label">Black & White</span>
+      </button>
+
+      <!-- Traditional - Crystaline Wood -->
+      <button class="gemstone-button" data-category="traditional" data-stone="Crystaline Wood">
+        <img src="assets/crystalinewood.png" alt="Crystaline Wood">
+        <span class="button-label">Traditional</span>
+      </button>
+
+    </div>
+  </section>
+
+  <!-- Main Gallery Grid -->
+  <main class="gallery-main" id="gallery">
+    <h2 class="section-title"></h2>
+    <p class="active-category">Showing: <span id="category-name">All Artwork</span></p>
+    
+    <div class="gallery-grid">
+      
+      <!-- Digital Art Examples -->
+      <div class="gallery-item" data-category="digital">
+        <img src="assets/artwork1.jpg" alt="Digital Artwork 1" class="gallery-image">
+        <div class="gallery-caption">
+          <h3>Cosmic Dreams</h3>
+          <p>Digital Art • 2024</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="digital">
+        <img src="assets/artwork2.jpg" alt="Digital Artwork 2" class="gallery-image">
+        <div class="gallery-caption">
+          <h3>Neon Nights</h3>
+          <p>Digital Art • 2024</p>
+        </div>
+      </div>
+
+      <!-- Portrait Examples -->
+      <div class="gallery-item" data-category="portraits">
+        <img src="assets/artwork3.jpg" alt="Portrait 1" class="gallery-image">
+        <div class="gallery-caption">
+          <h3>Faces of Time</h3>
+          <p>Portrait • 2024</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="portraits">
+        <img src="assets/artwork4.jpg" alt="Portrait 2" class="gallery-image">
+        <div class="gallery-caption">
+          <h3>Silent Gaze</h3>
+          <p>Portrait • 2023</p>
+        </div>
+      </div>
+
+      <!-- Mixed Media Examples -->
+      <div class="gallery-item" data-category="mixed">
+        <img src="assets/artwork5.jpg" alt="Mixed Media 1" class="gallery-image">
+        <div class="gallery-caption">
+          <h3>Collage Dreams</h3>
+          <p>Mixed Media • 2024</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="mixed">
+        <img src="assets/artwork6.jpg" alt="Mixed Media 2" class="gallery-image">
+        <div class="gallery-caption">
+          <h3>Texture Study</h3>
+          <p>Mixed Media • 2024</p>
+        </div>
+      </div>
+
+      <!-- Abstract Examples -->
+      <div class="gallery-item" data-category="abstract">
+        <img src="assets/artwork1.jpg" alt="Abstract 1" class="gallery-image">
+        <div class="gallery-caption">
+          <h3>Color Burst</h3>
+          <p>Abstract • 2024</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="abstract">
+        <img src="assets/artwork2.jpg" alt="Abstract 2" class="gallery-image">
+        <div class="gallery-caption">
+          <h3>Liquid Motion</h3>
+          <p>Abstract • 2023</p>
+        </div>
+      </div>
+
+      <!-- Paintings Examples -->
+      <div class="gallery-item" data-category="paintings">
+        <img src="assets/artwork3.jpg" alt="Painting 1" class="gallery-image">
+        <div class="gallery-caption">
+          <h3>Sunset Valley</h3>
+          <p>Acrylic on Canvas • 2024</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="paintings">
+        <img src="assets/artwork4.jpg" alt="Painting 2" class="gallery-image">
+        <div class="gallery-caption">
+          <h3>Ocean Waves</h3>
+          <p>Oil on Canvas • 2023</p>
+        </div>
+      </div>
+
+      <!-- Illustrations Examples -->
+      <div class="gallery-item" data-category="illustrations">
+        <img src="assets/artwork5.jpg" alt="Illustration 1" class="gallery-image">
+        <div class="gallery-caption">
+          <h3>Character Design</h3>
+          <p>Digital Illustration • 2024</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="illustrations">
+        <img src="assets/artwork6.jpg" alt="Illustration 2" class="gallery-image">
+        <div class="gallery-caption">
+          <h3>Fantasy World</h3>
+          <p>Illustration • 2024</p>
+        </div>
+      </div>
+
+      <!-- Sketches Examples -->
+      <div class="gallery-item" data-category="sketches">
+        <img src="assets/artwork1.jpg" alt="Sketch 1" class="gallery-image">
+        <div class="gallery-caption">
+          <h3>Quick Study</h3>
+          <p>Pencil Sketch • 2024</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="sketches">
+        <img src="assets/artwork2.jpg" alt="Sketch 2" class="gallery-image">
+        <div class="gallery-caption">
+          <h3>Line Work</h3>
+          <p>Ink Sketch • 2023</p>
+        </div>
+      </div>
+
+      <!-- Black & White Examples -->
+      <div class="gallery-item" data-category="bw">
+        <img src="assets/artwork3.jpg" alt="BW Art 1" class="gallery-image">
+        <div class="gallery-caption">
+          <h3>Shadows</h3>
+          <p>Black & White • 2024</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="bw">
+        <img src="assets/artwork4.jpg" alt="BW Art 2" class="gallery-image">
+        <div class="gallery-caption">
+          <h3>Contrast</h3>
+          <p>Monochrome • 2023</p>
+        </div>
+      </div>
+
+      <!-- Traditional Examples -->
+      <div class="gallery-item" data-category="traditional">
+        <img src="assets/artwork5.jpg" alt="Traditional 1" class="gallery-image">
+        <div class="gallery-caption">
+          <h3>Watercolor Bloom</h3>
+          <p>Watercolor • 2024</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="traditional">
+        <img src="assets/artwork6.jpg" alt="Traditional 2" class="gallery-image">
+        <div class="gallery-caption">
+          <h3>Still Life</h3>
+          <p>Charcoal • 2023</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Animated Lighting Footer -->
+  <footer id="wrap">
+    <div id="lightings">
+      <section id="one"></section>
+      <section id="two"></section>
+      <section id="three"></section>
+      <section id="four"></section>
+      <section id="five"></section>
+    </div>
+    <div class="footer-content">
+      <p>&copy; 2025 Amanda Mann Fine Art. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Load JavaScript -->
+  <script src="gemstone-script.js"></script>
+</body>
+</html>

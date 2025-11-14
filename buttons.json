@@ -1,0 +1,23 @@
+[
+  {
+    "id": "btn_opal",
+    "label": "Opal",
+    "image": "assets/button_opal.png",
+    "class": "button-dreamstone button-glow",
+    "onClickMessage": "Opal button clicked!"
+  },
+  {
+    "id": "btn_onyx",
+    "label": "Onyx",
+    "image": "assets/button_onyx.png",
+    "class": "button-dreamstone button-pulse",
+    "onClickMessage": "Onyx button clicked!"
+  },
+  {
+    "id": "btn_agate",
+    "label": "Agate",
+    "image": "assets/button_agate.png",
+    "class": "button-dreamstone button-shadow",
+    "onClickMessage": "Agate button clicked!"
+  }
+]
