@@ -4,6 +4,11 @@
    ============================================= */
 
 /* ===========================
+   IMPORT GOOGLE FONTS
+   =========================== */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Fredoka+One&family=Satisfy&display=swap');
+
+/* ===========================
    CSS VARIABLES & ROOT STYLES
    =========================== */
 :root {
@@ -37,7 +42,6 @@ body {
 /* =============================================
    Generic Curved Header (NOT for portfolio pages)
    ============================================= */
-
 header:not(.portfolio-header) {
   background: url('assets/vibrantdesktop.png');
   text-align: center;
@@ -115,7 +119,6 @@ header:not(.portfolio-header) button:active {
   transform: translateY(-1px);
 }
 
-
 /* ===========================
    GEMSTONE BUTTON SECTION
    =========================== */
@@ -134,9 +137,6 @@ header:not(.portfolio-header) button:active {
   margin: 0 auto;
   padding: 0 20px;
 }
-
-
-
 
 /* ===========================
    GEMSTONE BUTTON STYLES
@@ -197,7 +197,6 @@ header:not(.portfolio-header) button:active {
   transform: translateY(-5px);
 }
 
-
 .gemstone-button:hover img {
   transform: scale(1.1) rotate(5deg);
   filter: drop-shadow(0 8px 25px rgba(127, 255, 212, 0.6));
@@ -207,8 +206,6 @@ header:not(.portfolio-header) button:active {
   color: var(--glow-color);
   transform: scale(1.05);
 }
-
-
 
 .gemstone-button.active img {
   filter: drop-shadow(0 8px 25px rgba(255, 215, 0, 0.8));
@@ -247,11 +244,15 @@ header:not(.portfolio-header) button:active {
 }
 
 #category-name {
-  color: var(--glow-color);
+  font-family: 'Fredoka One', cursive;
   font-weight: 700;
-  font-family: 'Kaushan Script', cursive;
-  font-size: 1.5rem;
-  text-shadow: 0 0 15px var(--glow-color);
+  font-size: 1.8rem;
+  background: linear-gradient(270deg, #7fffd4, #32cd32, #00ffff, #7fffd4);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 25px #7fffd4, 0 0 10px rgba(255,255,255,0.3);
+  animation: gradientShift 8s ease infinite;
 }
 
 /* ===========================
@@ -265,12 +266,16 @@ header:not(.portfolio-header) button:active {
 }
 
 .section-title {
-  font-family: 'Pinyon Script', cursive;
-  font-size: 3.5rem;
-  color: var(--glow-color);
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 4rem;
+  background: linear-gradient(270deg, #ff6ec7, #7fffd4, #ffd700, #ff6ec7);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-align: center;
   margin-bottom: 30px;
-  text-shadow: 0 0 20px var(--glow-color);
+  text-shadow: 0 0 30px #7fffd4, 0 0 15px rgba(255,255,255,0.4);
+  animation: gradientShift 10s ease infinite;
 }
 
 .gallery-grid {
@@ -309,14 +314,8 @@ header:not(.portfolio-header) button:active {
 }
 
 @keyframes fadeInScale {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 .gallery-item:hover {
@@ -338,17 +337,16 @@ header:not(.portfolio-header) button:active {
   transform: scale(1.08);
 }
 
-.gallery-caption {
-  padding: 25px;
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px);
-}
-
 .gallery-caption h3 {
-  font-family: 'Pinyon Script', cursive;
-  font-size: 2rem;
-  color: var(--glow-color);
+  font-family: 'Satisfy', cursive;
+  font-size: 2.2rem;
+  background: linear-gradient(270deg, #ffdd00, #ff6ec7, #00ffff, #ffdd00);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 8px;
+  text-shadow: 0 0 20px #7fffd4, 0 0 8px rgba(255,255,255,0.3);
+  animation: gradientShift 12s ease infinite;
 }
 
 .gallery-caption p {
@@ -389,7 +387,6 @@ section {
   animation: one 5s ease-in-out infinite alternate;
   will-change: box-shadow;
 }
-}
 
 @keyframes one {
   from { box-shadow: 0 0 250px 20px #473C78; }
@@ -400,7 +397,6 @@ section {
   width: 90%;
   animation: two 4s ease-in-out infinite alternate;
   will-change: box-shadow;
-}
 }
 
 @keyframes two {
@@ -413,7 +409,6 @@ section {
   animation: three 3s ease-in-out infinite alternate;
   will-change: box-shadow;
 }
-}
 
 @keyframes three {
   from { box-shadow: 0 0 250px 20px #FFDD00; }
@@ -425,7 +420,6 @@ section {
   animation: four 2s ease-in-out infinite alternate;
   will-change: box-shadow;
 }
-}
 
 @keyframes four {
   from { box-shadow: 0 0 250px 20px #781848; }
@@ -436,8 +430,6 @@ section {
   width: 60%;
   animation: five 1s ease-in-out infinite alternate;  
   will-change: box-shadow;
-}
-
 }
 
 @keyframes five {
@@ -452,6 +444,7 @@ section {
   padding: 40px 20px;
   color: var(--glow-color);
   font-size: 0.95rem;
+  text-shadow: 0 0 10px var(--glow-color), 0 0 20px rgba(127,255,212,0.3);
 }
 
 /* ===========================
@@ -465,61 +458,22 @@ section {
 }
 
 @media (max-width: 768px) {
-  h1 {
-    font-size: 3rem;
-  }
-  
-  .gallery-title {
-    font-size: 2.5rem;
-  }
-  
-  .section-title {
-    font-size: 2.5rem;
-  }
-  
-  .gallery-grid {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-  
-  .gemstone-nav {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .gemstone-button {
-    min-height: 180px;
-  }
-  
-  .gemstone-button img {
-    width: 100px;
-    height: 100px;
-  }
+  h1 { font-size: 3rem; }
+  .gallery-title { font-size: 2.5rem; }
+  .section-title { font-size: 2.5rem; }
+  .gallery-grid { grid-template-columns: 1fr; gap: 25px; }
+  .gemstone-nav { grid-template-columns: repeat(2, 1fr); }
+  .gemstone-button { min-height: 180px; }
+  .gemstone-button img { width: 100px; height: 100px; }
 }
 
 @media (max-width: 480px) {
-  h1 {
-    font-size: 2rem;
-  }
-  
-  h3 {
-    font-size: 1.2rem;
-  }
-  
-  header p {
-    font-size: 1rem;
-  }
-  
-  .gallery-title {
-    font-size: 2rem;
-  }
-  
-  .gemstone-nav {
-    grid-template-columns: 1fr;
-  }
-  
-  .button-label {
-    font-size: 1rem;
-  }
+  h1 { font-size: 2rem; }
+  h3 { font-size: 1.2rem; }
+  header p { font-size: 1rem; }
+  .gallery-title { font-size: 2rem; }
+  .gemstone-nav { grid-template-columns: 1fr; }
+  .button-label { font-size: 1rem; }
 }
 
 /* ===========================
@@ -529,3 +483,10 @@ section {
   0% { opacity: 0; transform: translateY(10px); }
   100% { opacity: 1; transform: translateY(0); }
 }
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
