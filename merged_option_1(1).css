@@ -1,0 +1,720 @@
+/* Option 1 merged CSS sample */
+/* =============================================
+   styles.css
+   Main Site Styles with Glassmorphic Header
+   ============================================= */
+
+/* ===========================
+   CSS VARIABLES & ROOT STYLES
+   =========================== */
+:root {
+  --glow-color: rgba(127, 255, 212, 0.8);
+  --active-glow: rgba(255, 215, 0, 1);
+  --gemstone-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --text-dark: rgba(255, 255, 255, 0.9);
+}
+
+/* ===========================
+   RESET & BASE STYLES
+   =========================== */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: url('assets/vibrantdesktop.png') center/cover no-repeat fixed;
+  color: #fff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* =============================================
+   Portfolio Header (Glass + Gem Gradient)
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.portfolio-header {
+  background: url('assets/vibrantdesktop.png') center/cover no-repeat fixed;
+  text-align: center;
+  width: 100%;
+  min-height: 600px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 0 85% 85% / 30%;
+}
+
+.portfolio-header .overlay {
+  width: 100%;
+  height: 100%;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 10%, rgba(126, 200, 195, 0.2) 100%);
+}
+
+.portfolio-header h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 6rem;
+  background: linear-gradient(90deg, #7fffd4, #ffd700, #ff69b4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow:
+    0 0 10px rgba(127,255,212,0.8),
+    0 0 20px rgba(255,215,0,0.7),
+    0 0 30px rgba(255,105,180,0.6);
+  margin-bottom: 20px;
+  animation: glowPulse 5s ease-in-out infinite alternate;
+}
+
+.portfolio-header h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: var(--text-dark);
+  text-shadow:
+    1px 1px 4px rgba(0,0,0,0.4),
+    0 0 6px rgba(127,255,212,0.4);
+  margin-bottom: 15px;
+}
+
+.portfolio-header p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  opacity: 0.9;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.35);
+}
+
+/* Glow animation keyframes */
+@keyframes glowPulse {
+  0% {
+    text-shadow:
+      0 0 8px rgba(127,255,212,0.6),
+      0 0 16px rgba(255,215,0,0.5),
+      0 0 24px rgba(255,105,180,0.4);
+  }
+  50% {
+    text-shadow:
+      0 0 18px rgba(127,255,212,1),
+      0 0 36px rgba(255,215,0,0.9),
+      0 0 54px rgba(255,105,180,0.8);
+  }
+  100% {
+    text-shadow:
+      0 0 8px rgba(127,255,212,0.6),
+      0 0 16px rgba(255,215,0,0.5),
+      0 0 24px rgba(255,105,180,0.4);
+  }
+}
+
+
+
+/* ===========================
+   BUTTON NAVIGATION SECTION
+   =========================== */
+.button-nav {
+  padding: 40px 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+}
+
+.section-title {
+  font-family: var(--font-elegant);
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: 30px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===========================
+   DREAMSTONE BUTTON STYLES
+   =========================== */
+.button-dreamstone {
+  position: relative;
+  padding: 15px 35px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  color: var(--text-light);
+  background-size: cover;
+  background-position: center;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  min-width: 150px;
+  backdrop-filter: blur(5px);
+}
+
+.button-dreamstone::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+  transition: background 0.3s ease;
+}
+
+.button-dreamstone:hover::before {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.button-dreamstone span,
+.button-dreamstone::after {
+  position: relative;
+  z-index: 1;
+}
+
+.button-dreamstone:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-color);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.button-dreamstone:active {
+  transform: translateY(-1px);
+}
+
+/* Button Glow Effect */
+.button-glow {
+  box-shadow: 0 0 20px var(--glow-color),
+              0 0 40px var(--glow-color),
+              0 5px 15px rgba(0, 0, 0, 0.3);
+  animation: button-glow-pulse 2s ease-in-out infinite;
+}
+
+@keyframes button-glow-pulse {
+  0%, 100% { 
+    box-shadow: 0 0 20px var(--glow-color),
+                0 0 40px var(--glow-color),
+                0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  50% { 
+    box-shadow: 0 0 30px var(--glow-color),
+                0 0 60px var(--glow-color),
+                0 8px 20px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Button Pulse Effect */
+.button-pulse {
+  animation: pulse 1.5s ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.pulse {
+  animation: pulse 1.5s ease-in-out;
+}
+
+/* Button Shadow Effect */
+.button-shadow {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.button-shadow:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+}
+
+/* Active State */
+.button-dreamstone.active {
+  border-color: #ffd700;
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
+}
+
+/* ===========================
+   GALLERY SECTION
+   =========================== */
+.gallery-main {
+  padding: 60px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.gallery-item {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.gallery-item:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent-color);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5),
+              0 0 30px var(--glow-color);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .gallery-image {
+  transform: scale(1.08);
+}
+
+.gallery-caption {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+.gallery-caption h3 {
+  font-family: var(--font-elegant);
+  font-size: 1.8rem;
+  color: var(--accent-color);
+  margin-bottom: 8px;
+}
+
+.gallery-caption p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+.portfolio-footer {
+  text-align: center;
+  padding: 30px 20px;
+  background: url('assets/mistywood.png');
+  backdrop-filter: blur(10px);
+  border-top: 2px solid var(--accent-color);
+  margin-top: 60px;
+}
+
+.portfolio-footer p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+@media (max-width: 768px) {
+  .portfolio-title {
+    font-size: 2.5rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .button-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .button-dreamstone {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-title {
+    font-size: 2rem;
+  }
+  
+  .portfolio-subtitle {
+    font-size: 1rem;
+  }
+}
+
+
+/* =============================================
+   GEMSTONE PORTFOLIO STYLESHEET
+   ============================================= */
+
+/* ===========================
+   GOOGLE FONTS
+   =========================== */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Fredoka+One&family=Satisfy&display=swap');
+
+/* ===========================
+   CSS VARIABLES
+   =========================== */
+:root {
+  --glow-color: rgba(127, 255, 212, 0.8);
+  --active-glow: rgba(255, 215, 0, 1);
+}
+
+/* ===========================
+   RESET & BASE
+   =========================== */
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { width:100%; min-height:100vh; }
+body {
+  font-family: 'Open Sans', sans-serif;
+  color:#fff;
+  line-height:1.6;
+  background: url('assets/vibrantdesktop.png') no-repeat center center fixed;
+  background-size: cover;
+  overflow-x:hidden;
+}
+
+/* =============================================
+   CURVED HEADER (USES SAME IMAGE AS BACKGROUND)
+   ============================================= */
+header {
+  width:100%;
+  min-height:600px;
+  background: url('assets/vibrantdesktop.png') center center/cover no-repeat fixed;
+  border-radius: 0 0 85% 85% / 30%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+header .overlay {
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background-image: linear-gradient(135deg, rgba(255,255,255,0.1) 10%, rgba(126,200,195,0.2) 100%);
+}
+
+header h1 {
+  font-family: 'Satisfy', cursive;
+  font-size: 80px;
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease-in;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+header h3 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+header p {
+  font-size: 1.2rem;
+  font-weight:300;
+  opacity:0.9;
+  margin-bottom:30px;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.3);
+}
+
+header button {
+  padding:15px 35px;
+  border-radius:50px;
+  border:none;
+  outline:none;
+  font-weight:600;
+  font-size:1.1rem;
+  cursor:pointer;
+  background:#fff;
+  color:#333;
+  box-shadow: 0 3px 20px rgba(0,0,0,0.23);
+  transition: all 0.3s ease;
+}
+
+header button:hover {
+  transform:translateY(-3px);
+  box-shadow: 0 5px 30px rgba(255,255,255,0.5);
+  background: var(--glow-color);
+  color:#000;
+}
+
+header button:active {
+  transform:translateY(-1px);
+}
+
+/* ===========================
+   GEMSTONE BUTTONS
+   =========================== */
+.gemstone-nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap:30px;
+  max-width:1400px;
+  margin:0 auto;
+  padding:0 20px;
+}
+
+.gemstone-button {
+  position:relative;
+  background: linear-gradient(145deg, rgba(0,0,0,0.25), rgba(127,255,212,0.05));
+  border:3px solid rgba(255,255,255,0.2);
+  border-radius:20px;
+  padding:20px;
+  cursor:pointer;
+  min-height:200px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+.gemstone-button img {
+  width:120px;
+  height:120px;
+  object-fit:contain;
+  filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5));
+  transition: all 0.4s ease;
+  margin-bottom:15px;
+}
+
+.button-label {
+  font-size:1.1rem;
+  font-weight:700;
+  color:#fff;
+  text-align:center;
+  z-index:2;
+  position:relative;
+  transition: all 0.3s ease;
+}
+
+.gemstone-button:hover {
+  transform:translateY(-10px) scale(1.05);
+  border-color: var(--glow-color);
+  box-shadow: 0 15px 40px rgba(127,255,212,0.4), 0 0 30px rgba(127,255,212,0.3);
+  background: rgba(127,255,212,0.1);
+}
+
+.gemstone-button:hover img {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 8px 25px rgba(127,255,212,0.6));
+}
+
+.gemstone-button:hover .button-label {
+  color: var(--glow-color);
+  transform: scale(1.05);
+}
+
+.gemstone-button.active {
+  border-color:#ffd700;
+  background: rgba(255,215,0,0.15);
+  box-shadow: 0 15px 50px rgba(255,215,0,0.6),0 0 40px rgba(255,215,0,0.5), inset 0 0 20px rgba(255,215,0,0.2);
+  transform: translateY(-5px);
+}
+
+.gemstone-button.active img {
+  filter: drop-shadow(0 8px 25px rgba(255,215,0,0.8));
+  animation: gemPulse 2s ease-in-out infinite;
+}
+
+.gemstone-button.active .button-label {
+  color:#ffd700;
+  font-weight:900;
+  text-shadow: 0 0 15px rgba(255,215,0,0.8);
+}
+
+@keyframes gemPulse {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+/* ===========================
+   MAIN GALLERY GRID
+   =========================== */
+.gallery-main {
+  padding: 80px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #bce1ef 0%, #d2d2d5 100%);
+}
+
+.section-title {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 3.5rem;
+  color: var(--glow-color);
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 0 0 20px var(--glow-color);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 35px;
+  margin-top: 40px;
+}
+
+.gallery-item {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  overflow: hidden;
+  border: 2px solid rgba(127, 255, 212, 0.3);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Filtering States */
+.gallery-item.hidden {
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+  position: absolute;
+  visibility: hidden;
+}
+
+.gallery-item.show {
+  opacity: 1;
+  transform: scale(1);
+  animation: fadeInScale 0.5s ease-out;
+}
+
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.gallery-item:hover {
+  transform: translateY(-10px);
+  border-color: var(--glow-color);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7),
+              0 0 30px var(--glow-color);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .gallery-image {
+  transform: scale(1.08);
+}
+
+.gallery-caption {
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.gallery-caption h3 {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 2rem;
+  color: var(--glow-color);
+  margin-bottom: 8px;
+}
+
+.gallery-caption p {
+  color: #fff;
+  font-size: 1rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+/* ===========================
+   FOOTER LIGHT ANIMATION
+   =========================== */
+#wrap {
+  width:100%;
+  min-height:300px;
+  position:relative;
+  margin:0 auto;
+  overflow:hidden;
+  background:#000;
+  padding-top:100px;
+}
+
+#lightings {
+  bottom:-60px;
+  position:absolute;
+  width:100%;
+}
+
+section {
+  border-radius:50%;
+  height:20px;
+  width:100%;
+  position:relative;
+  margin:auto;
+}
+
+#one { animation: one 5s ease-in-out infinite alternate; }
+#two { width:90%; animation: two 4s ease-in-out infinite alternate; }
+#three { width:80%; animation: three 3s ease-in-out infinite alternate; }
+#four { width:70%; animation: four 2s ease-in-out infinite alternate; }
+#five { width:60%; animation: five 1s ease-in-out infinite alternate; }
+
+@keyframes one { from{box-shadow:0 0 250px 20px #473C78} to{box-shadow:0 0 100px 15px #F72A3B} }
+@keyframes two { from{box-shadow:0 0 250px 20px #18C499} to{box-shadow:0 0 100px 15px #D8F05E} }
+@keyframes three { from{box-shadow:0 0 250px 20px #FFDD00} to{box-shadow:0 0 100px 15px #3E33FF} }
+@keyframes four { from{box-shadow:0 0 250px 20px #781848} to{box-shadow:0 0 100px 15px #F2BBE9} }
+@keyframes five { from{box-shadow:0 0 250px 20px #42F2A1} to{box-shadow:0 0 100px 15px #F4F6AD} }
+
+.footer-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--glow-color);
+  font-size: 0.95rem;
+  text-shadow: 0 0 10px var(--glow-color), 0 0 20px rgba(127,255,212,0.3);
+}
+
+/* ===========================
+   UTILITY ANIMATIONS
+   =========================== */
+@keyframes fadeIn { 0%{opacity:0;transform:translateY(10px);}100%{opacity:1;transform:translateY(0);} }
+
