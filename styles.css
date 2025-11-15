@@ -46,7 +46,7 @@ body {
 .portfolio-title {
   font-family: var(--font-script);
   font-size: 6rem;
-  color: var(--accent-color);
+  color: var(--text-dark);
   text-shadow: 0 0 20px var(--glow-color),
                0 0 40px var(--glow-color);
   margin-bottom: 30px;
@@ -60,7 +60,7 @@ body {
 
 .portfolio-subtitle {
   font-size: 1.3rem;
-  color: var(--text-light);
+  color: var(--text-dark);
   font-weight: 300;
   font-style: italic;
 }
