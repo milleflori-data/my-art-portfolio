@@ -119,10 +119,6 @@ header:not(.portfolio-header) button:active {
 /* ===========================
    GEMSTONE BUTTON SECTION
    =========================== */
-
-
-
-
 .subtitle {
   font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.7);
@@ -139,17 +135,19 @@ header:not(.portfolio-header) button:active {
   padding: 0 20px;
 }
 
+
+
+
 /* ===========================
    GEMSTONE BUTTON STYLES
    =========================== */
 .gemstone-button {
   position: relative;
-  background: transparent;
-  border: 3px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(145deg, rgba(0,0,0,0.25), rgba(127,255,212,0.05));
+  border: 3px solid rgba(255, 255, 255 , 0.2);
   border-radius: 20px;
   padding: 20px;
   cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
   min-height: 200px;
   display: flex;
@@ -157,7 +155,7 @@ header:not(.portfolio-header) button:active {
   align-items: center;
   justify-content: center;
   backdrop-filter: blur(10px);
-  background: rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .gemstone-button img {
@@ -182,7 +180,6 @@ header:not(.portfolio-header) button:active {
   letter-spacing: 0.5px;
 }
 
-/* Hover Effects */
 .gemstone-button:hover {
   transform: translateY(-10px) scale(1.05);
   border-color: var(--glow-color);
@@ -190,6 +187,16 @@ header:not(.portfolio-header) button:active {
               0 0 30px rgba(127, 255, 212, 0.3);
   background: rgba(127, 255, 212, 0.1);
 }
+
+.gemstone-button.active {
+  border-color: #ffd700;
+  background: rgba(255, 215, 0, 0.15);
+  box-shadow: 0 15px 50px rgba(255, 215, 0, 0.6),
+              0 0 40px rgba(255, 215, 0, 0.5),
+              inset 0 0 20px rgba(255, 215, 0, 0.2);
+  transform: translateY(-5px);
+}
+
 
 .gemstone-button:hover img {
   transform: scale(1.1) rotate(5deg);
@@ -201,15 +208,7 @@ header:not(.portfolio-header) button:active {
   transform: scale(1.05);
 }
 
-/* Active (Selected) State */
-.gemstone-button.active {
-  border-color: #ffd700;
-  background: rgba(255, 215, 0, 0.15);
-  box-shadow: 0 15px 50px rgba(255, 215, 0, 0.6),
-              0 0 40px rgba(255, 215, 0, 0.5),
-              inset 0 0 20px rgba(255, 215, 0, 0.2);
-  transform: translateY(-5px);
-}
+
 
 .gemstone-button.active img {
   filter: drop-shadow(0 8px 25px rgba(255, 215, 0, 0.8));
@@ -388,6 +387,8 @@ section {
 
 #one {
   animation: one 5s ease-in-out infinite alternate;
+  will-change: box-shadow;
+}
 }
 
 @keyframes one {
@@ -398,6 +399,8 @@ section {
 #two {
   width: 90%;
   animation: two 4s ease-in-out infinite alternate;
+  will-change: box-shadow;
+}
 }
 
 @keyframes two {
@@ -408,6 +411,8 @@ section {
 #three {
   width: 80%;
   animation: three 3s ease-in-out infinite alternate;
+  will-change: box-shadow;
+}
 }
 
 @keyframes three {
@@ -418,6 +423,8 @@ section {
 #four {
   width: 70%;
   animation: four 2s ease-in-out infinite alternate;
+  will-change: box-shadow;
+}
 }
 
 @keyframes four {
@@ -427,7 +434,10 @@ section {
 
 #five {
   width: 60%;
-  animation: five 1s ease-in-out infinite alternate;
+  animation: five 1s ease-in-out infinite alternate;  
+  will-change: box-shadow;
+}
+
 }
 
 @keyframes five {
