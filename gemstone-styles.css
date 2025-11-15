@@ -34,10 +34,11 @@ body {
   overflow-x: hidden;
 }
 
-/* ===========================
-   CURVED HEADER DESIGN
-   =========================== */
-header {
+/* =============================================
+   Generic Curved Header (NOT for portfolio pages)
+   ============================================= */
+
+header:not(.portfolio-header) {
   background: url('assets/vibrantdesktop.png');
   text-align: center;
   width: 100%;
@@ -51,7 +52,7 @@ header {
   border-radius: 0 0 85% 85% / 30%;
 }
 
-header .overlay {
+header:not(.portfolio-header) .overlay {
   width: 100%;
   height: 100%;
   padding: 80px;
@@ -65,29 +66,30 @@ header .overlay {
   min-height: 600px;
 }
 
-h1 {
+header:not(.portfolio-header) h1 {
   font-family: 'Dancing Script', cursive;
   font-size: 80px;
   margin-bottom: 30px;
   animation: fadeIn 1.5s ease-in;
 }
 
-h3, p {
+header:not(.portfolio-header) h3,
+header:not(.portfolio-header) p {
   font-family: 'Open Sans', sans-serif;
   margin-bottom: 30px;
   font-weight: 300;
 }
 
-h3 {
+header:not(.portfolio-header) h3 {
   font-size: 1.8rem;
 }
 
-header p {
+header:not(.portfolio-header) p {
   font-size: 1.2rem;
   opacity: 0.9;
 }
 
-header button {
+header:not(.portfolio-header) button {
   border: none;
   outline: none;
   padding: 15px 35px;
@@ -102,16 +104,17 @@ header button {
   transition: all 0.3s ease;
 }
 
-header button:hover {
+header:not(.portfolio-header) button:hover {
   transform: translateY(-3px);
   box-shadow: 0 5px 30px 0 rgba(255, 255, 255, 0.5);
   background: var(--glow-color);
   color: #000;
 }
 
-header button:active {
+header:not(.portfolio-header) button:active {
   transform: translateY(-1px);
 }
+
 
 /* ===========================
    GEMSTONE BUTTON SECTION
