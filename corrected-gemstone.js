@@ -67,7 +67,7 @@ function openLightbox(src,alt,title,category){
     const link=document.createElement('a');link.href='https://www.funnelcakepodcast.com/index.html';link.target='_blank';link.textContent='Listen Here';
     link.style.cssText='display:inline-block;margin-top:20px;padding:10px 20px;background:#0ff;text-decoration:none;';
     info.appendChild(link);
-  if(title===" "){
+  if(title==="Shop Funnelcake Podcast"){
     const link=document.createElement('a');link.href='https://funnelcake-podcast-merch.printify.me';link.target='_blank';link.textContent= 'Products';
     link.style.cssText='display:inline-block;margin-top:20px;padding:10px;background:#0ff;text-decoration:none;';
     info.appendChild(link);
