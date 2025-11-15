@@ -37,7 +37,7 @@ body {
    =========================== */
 .portfolio-header {
   text-align: center;
-  padding: 60px 20px 40px;
+  padding: 140px 20px 40px;
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
   border-bottom: 2px solid var(--accent-color);
@@ -47,23 +47,26 @@ body {
   font-family: var(--font-script);
   font-size: 6rem;
   color: var(--text-dark);
-  text-shadow: 0 0 20px var(--glow-color),
-               0 0 40px var(--glow-color);
   margin-bottom: 30px;
-  animation: glow-pulse 3s ease-in-out infinite;
+
+  /* subtle, elegant shadow */
+  text-shadow:
+    2px 2px 6px rgba(0,0,0,0.35),
+    0 0 8px rgba(255,255,255,0.15);
+
+  /* NEW: soft shimmer animation */
+  animation: title-shimmer 4s ease-in-out infinite;
 }
 
-@keyframes glow-pulse {
-  0%, 100% { text-shadow: 0 0 20px var(--glow-color), 0 0 40px var(--glow-color); }
-  50% { text-shadow: 0 0 30px var(--glow-color), 0 0 60px var(--glow-color); }
-}
 
 .portfolio-subtitle {
   font-size: 1.3rem;
   color: var(--text-dark);
   font-weight: 300;
   font-style: italic;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.25);
 }
+
 
 /* ===========================
    BUTTON NAVIGATION SECTION
