@@ -101,7 +101,9 @@ function filterGallery(category) {
   }, 100);
 }
 
-function showAllItems() {
+function filterGallery("all");
+// or use filterGallery("none") if you want the gallery initially empty
+ {
   const galleryItems = document.querySelectorAll('.gallery-item');
   galleryItems.forEach(item => {
     item.classList.remove('hidden');
@@ -270,7 +272,41 @@ function openLightbox(src, alt, title, category) {
     
     lightbox.appendChild(infoContainer);
   }
-  
+
+  // If this is the podcast category, add a "Listen Here" link button
+  if (title === "Listen To Episodes") {
+    const linkBtn = document.createElement('a');
+    linkBtn.href = "https://www.funnelcakepodcast.com/index.html";
+    linkBtn.target = "_blank";
+    linkBtn.textContent = "Listen Here";
+
+    linkBtn.style.cssText = `
+      display: inline-block;
+      margin-top: 25px;
+      padding: 14px 28px;
+      background: linear-gradient(135deg, rgba(127,255,212,0.95), rgba(255,215,0,0.95));
+      color: #000;
+      font-weight: 700;
+      border-radius: 12px;
+      font-size: 1.3rem;
+      text-decoration: none;
+      box-shadow: 0 0 25px rgba(127,255,212,0.7), 0 0 40px rgba(255,215,0,0.4);
+      transition: all 0.3s ease;
+  `;
+
+  linkBtn.onmouseover = () => {
+    linkBtn.style.transform = "scale(1.1)";
+    linkBtn.style.boxShadow = "0 0 35px rgba(255,215,0,1)";
+  };
+
+  linkBtn.onmouseout = () => {
+    linkBtn.style.transform = "scale(1)";
+    linkBtn.style.boxShadow = "0 0 25px rgba(127,255,212,0.7), 0 0 40px rgba(255,215,0,0.4)";
+  };
+
+  infoContainer.appendChild(linkBtn);
+}
+
   // Create close button
   const closeBtn = document.createElement('div');
   closeBtn.innerHTML = '×';
