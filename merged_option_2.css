@@ -39,7 +39,7 @@ body {
 header {
   width:100%;
   min-height:600px;
-  background: url('assets/vibrantdesktop.png') center center/cover no-repeat fixed;
+  background: url('mellowdesktop.png') center center/cover no-repeat fixed;
   border-radius: 0 0 85% 85% / 30%;
   position: relative;
   overflow: hidden;
