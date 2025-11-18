@@ -5,118 +5,105 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Art Portfolio - Gemstone Gallery</title>
   
-  
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,1
-  00;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,70
-  0;1,800;1,900&display=swap" rel="stylesheet">
-rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
- <link rel="stylesheet" href="styles.css">
- <link rel="stylesheet" href="gemstone-styles.css"> 
- 
-
-  
-
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="gemstone-styles.css">
 </head>
 <body>
   
   <!-- Curved Header Section -->
- <header class="portfolio-header">
-  <div class="overlay">
-    <h1 class="portfolio-title">Amanda Mann Fine Art</h1>
-    <h3 class="portfolio-subtitle">A Complete Body of Work</h3>
-    <p class="portfolio-tagline">Explore, Listen, Read, and Enjoy!</p>
-    <button onclick="scrollToGallery()">View Portfolio</button>
-  </div>
-</header>
-
+  <header class="portfolio-header">
+    <div class="overlay">
+      <h1 class="portfolio-title">Amanda Mann Fine Art</h1>
+      <h3 class="portfolio-subtitle">A Complete Body of Work</h3>
+      <p class="portfolio-tagline">Explore, Listen, Read, and Enjoy!</p>
+    </div>
+  </header>
 
   <!-- Gemstone Category Buttons Section -->
-  
+  <div class="gemstone-nav">
     
-    <div class="gemstone-nav">
-      
-      <!-- All Artwork - Crystal Quartz -->
-      <button class="gemstone-button active" data-category="all" data-stone="Crystal Quartz">
-        <img src="assets/crystalquartz.png" alt="Crystal Quartz">
-        <span class="button-label">All Artwork</span>
-      </button>
+    <!-- All Artwork - Crystal Quartz -->
+    <button class="gemstone-button active" data-category="all" data-stone="Crystal Quartz">
+      <img src="assets/crystalquartz.png" alt="Crystal Quartz">
+      <span class="button-label">All Artwork</span>
+    </button>
 
-      <!-- Digital Art - Opal (Rainbow) -->
-      <button class="gemstone-button" data-category="digital" data-stone="Rainbow Opal">
-        <img src="assets/opalbutton.png" alt="Rainbow Opal">
-        <span class="button-label">Digital Art</span>
-      </button>
+    <!-- Digital Art - Opal (Rainbow) -->
+    <button class="gemstone-button" data-category="digital" data-stone="Rainbow Opal">
+      <img src="assets/opalbutton.png" alt="Rainbow Opal">
+      <span class="button-label">Digital Art</span>
+    </button>
 
-      <!-- Portraits - Pink Gemstone -->
-      <button class="gemstone-button" data-category="portraits" data-stone="Pink Tourmaline">
-        <img src="assets/opalbutton3.png" alt="Pink Gemstone">
-        <span class="button-label">Portraits</span>
-      </button>
+    <!-- Portraits - Pink Gemstone -->
+    <button class="gemstone-button" data-category="portraits" data-stone="Pink Tourmaline">
+      <img src="assets/opalbutton3.png" alt="Pink Gemstone">
+      <span class="button-label">Portraits</span>
+    </button>
 
-      <!-- Mixed Media - Rainbow Pink Opal -->
-      <button class="gemstone-button" data-category="mixed" data-stone="Fire Opal">
-        <img src="assets/opalbutton4.png" alt="Rainbow Pink Opal">
-        <span class="button-label">Mixed Media</span>
-      </button>
+    <!-- Mixed Media - Rainbow Pink Opal -->
+    <button class="gemstone-button" data-category="mixed" data-stone="Fire Opal">
+      <img src="assets/opalbutton4.png" alt="Rainbow Pink Opal">
+      <span class="button-label">Mixed Media</span>
+    </button>
 
-      <!-- Abstract - Cosmic Opal -->
-      <button class="gemstone-button" data-category="abstract" data-stone="Cosmic Opal">
-        <img src="assets/opalbutton5.png" alt="Cosmic Opal">
-        <span class="button-label">Abstract</span>
-      </button>
+    <!-- Abstract - Cosmic Opal -->
+    <button class="gemstone-button" data-category="abstract" data-stone="Cosmic Opal">
+      <img src="assets/opalbutton5.png" alt="Cosmic Opal">
+      <span class="button-label">Abstract</span>
+    </button>
 
-      <!-- Paintings - Dark Opal -->
-      <button class="gemstone-button" data-category="paintings" data-stone="Black Opal">
-        <img src="assets/opalbutton6.png" alt="Dark Opal">
-        <span class="button-label">Paintings</span>
-      </button>
+    <!-- Paintings - Dark Opal -->
+    <button class="gemstone-button" data-category="paintings" data-stone="Black Opal">
+      <img src="assets/opalbutton6.png" alt="Dark Opal">
+      <span class="button-label">Paintings</span>
+    </button>
 
-      <!-- Illustrations - Fire Opal -->
-      <button class="gemstone-button" data-category="illustrations" data-stone="Mexican Fire Opal">
-        <img src="assets/opalbutton7.png" alt="Fire Opal">
-        <span class="button-label">Illustrations</span>
-      </button>
+    <!-- Illustrations - Fire Opal -->
+    <button class="gemstone-button" data-category="illustrations" data-stone="Mexican Fire Opal">
+      <img src="assets/opalbutton7.png" alt="Fire Opal">
+      <span class="button-label">Illustrations</span>
+    </button>
 
-      <!-- Sketches - Jaspellite -->
-      <button class="gemstone-button" data-category="sketches" data-stone="Jaspellite">
-        <img src="assets/jaspellitebutton.png" alt="Jaspellite">
-        <span class="button-label">Sketches</span>
-      </button>
+    <!-- Sketches - Jaspellite -->
+    <button class="gemstone-button" data-category="sketches" data-stone="Jaspellite">
+      <img src="assets/jaspellitebutton.png" alt="Jaspellite">
+      <span class="button-label">Sketches</span>
+    </button>
 
-      <!-- Black & White - Hematite -->
-      <button class="gemstone-button" data-category="bw" data-stone="Hematite">
-        <img src="assets/hematite.png" alt="Hematite">
-        <span class="button-label">Black & White</span>
-      </button>
+    <!-- Black & White - Hematite -->
+    <button class="gemstone-button" data-category="bw" data-stone="Hematite">
+      <img src="assets/hematite.png" alt="Hematite">
+      <span class="button-label">Black & White</span>
+    </button>
 
-      <!-- Traditional - Crystaline Wood -->
-      <button class="gemstone-button" data-category="traditional" data-stone="Crystaline Wood">
-        <img src="assets/crystalinewood.png" alt="Crystaline Wood">
-        <span class="button-label">Traditional</span>
-      </button>
+    <!-- Traditional - Crystalline Wood -->
+    <button class="gemstone-button" data-category="traditional" data-stone="Crystalline Wood">
+      <img src="assets/crystalinewood.png" alt="Crystalline Wood">
+      <span class="button-label">Traditional</span>
+    </button>
 
-      <!-- Writing -  -->
-      <button class="gemstone-button" data-category="writing" data-stone="Jade">
-        <img src="assets/jade.png" alt="Jade">
-        <span class="button-label">Writing</span>
-      </button>
+    <!-- Writing - Jade -->
+    <button class="gemstone-button" data-category="writing" data-stone="Jade">
+      <img src="assets/jade.png" alt="Jade">
+      <span class="button-label">Writing</span>
+    </button>
 
-      <!-- Podcast - Red Garnet -->
-      <button class="gemstone-button" data-category="podcast" data-stone="Raw Garnet">
-        <img src="assets/rawgarnet.png" alt="Raw Garnet">
-        <span class="button-label">Podcast</span>
-      </button>
+    <!-- Podcast - Red Garnet -->
+    <button class="gemstone-button" data-category="podcast" data-stone="Raw Garnet">
+      <img src="assets/rawgarnet.png" alt="Raw Garnet">
+      <span class="button-label">Podcast</span>
+    </button>
 
-    </div>
-  </section>
+  </div>
 
   <!-- Main Gallery Grid -->
   <main class="gallery-main" id="gallery">
-    <h2 class="section-title"></h2>
-    <p class="active-category">Showing: <span id="category-name">All Artwork</span></p>
+    <p class="active-category">Showing: <span id="category-name">Select a gemstone to view artwork</span></p>
     
     <div class="gallery-grid">
       
@@ -275,35 +262,35 @@ rel="stylesheet">
 
       <!-- Writing Examples -->
       <div class="gallery-item" data-category="writing">
-        <img src="assets/artwork5.jpg" alt="Writing " class="gallery-image">
+        <img src="assets/artwork5.jpg" alt="Writing Sample" class="gallery-image">
         <div class="gallery-caption">
           <h3>Ufae</h3>
-          <p>Ufae • 2025</p>
+          <p>Literary Science Fiction • 2025</p>
         </div>
       </div>
 
       <div class="gallery-item" data-category="writing">
-        <img src="assets/artwork6.jpg" alt="Ufae - Literary Science Fiction" class="gallery-image">
+        <img src="assets/artwork6.jpg" alt="Ufae Novel" class="gallery-image">
         <div class="gallery-caption">
-          <h3>Ufae</h3>
-          <p>Ufae • 2025</p>
+          <h3>Ufae Novel</h3>
+          <p>Science Fiction • 2025</p>
         </div>
       </div>
 
-      <!-- My Podcast -->
+      <!-- Podcast Examples -->
       <div class="gallery-item" data-category="podcast">
         <img src="assets/Logo.png" alt="Funnelcake Podcast" class="gallery-image">
         <div class="gallery-caption">
           <h3>Listen To Episodes</h3>
-          <p> Listen Here • 2025</p>
+          <p>Funnelcake Podcast • 2025</p>
         </div>
       </div>
 
       <div class="gallery-item" data-category="podcast">
-        <img src="assets/mymerch.jpg" alt="Funnelcake Podcast Merchantile" class="gallery-image">
+        <img src="assets/mymerch.jpg" alt="Funnelcake Podcast Merchandise" class="gallery-image">
         <div class="gallery-caption">
           <h3>Shop Funnelcake Podcast</h3>
-          <p>Products • 2025</p>
+          <p>Merchandise • 2025</p>
         </div>
       </div>
 
