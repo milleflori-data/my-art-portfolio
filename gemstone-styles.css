@@ -5,7 +5,7 @@
 /* ===========================
    GOOGLE FONTS
    =========================== */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Cinzel+Decorative:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@600;700&display=swap');
 
 /* ===========================
    CSS VARIABLES
@@ -102,7 +102,7 @@ header p {
   width: 100%;
   padding: 0 20px 60px 20px;
   background: transparent;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .about-container {
@@ -330,7 +330,6 @@ header p {
 .section-title {
   font-family: 'Poppins', sans-serif;
   font-size: 3.5rem;
-  font-weight: 900;
   color: var(--glow-color);
   text-align: center;
   margin-bottom: 30px;
@@ -431,7 +430,6 @@ header p {
 .gallery-caption h3 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.5rem;
-  font-weight: 700;
   color: var(--glow-color);
   margin-bottom: 8px;
 }
@@ -475,7 +473,6 @@ header p {
 .lightbox-info h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 2.5rem;
-  font-weight: 800;
   color: var(--glow-color);
   margin-bottom: 15px;
   text-shadow: 0 0 20px var(--glow-color);
@@ -637,7 +634,7 @@ section {
   
   .about-section {
     padding: 0 20px 40px 20px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
   
   .about-container {
@@ -707,7 +704,7 @@ section {
   
   .about-section {
     padding: 0 20px 30px 20px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   
   .about-container {
@@ -755,4 +752,3 @@ section {
     margin: 40px auto 0 auto;
   }
 }
-
