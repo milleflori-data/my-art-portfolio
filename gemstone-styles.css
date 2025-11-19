@@ -94,6 +94,134 @@ header p {
 }
 
 /* ===========================
+   ABOUT THE ARTIST SECTION
+   =========================== */
+.about-section {
+  width: 100%;
+  padding: 60px 20px;
+  background: transparent;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: linear-gradient(145deg, rgba(0,0,0,0.4), rgba(127,255,212,0.15));
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
+  padding: 50px 40px;
+  border: 3px solid rgba(127,255,212,0.3);
+  box-shadow: 0 15px 50px rgba(0,0,0,0.5);
+  transition: all 0.4s ease;
+}
+
+.about-container:hover {
+  border-color: var(--glow-color);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 40px rgba(127,255,212,0.3);
+  transform: translateY(-5px);
+}
+
+.about-title {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 3rem;
+  font-weight: 900;
+  text-align: center;
+  color: var(--glow-color);
+  margin-bottom: 30px;
+  text-shadow: 0 0 20px var(--glow-color), 0 2px 10px rgba(0,0,0,0.8);
+  letter-spacing: 2px;
+}
+
+.about-content {
+  color: #fff;
+}
+
+.about-text {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  text-align: center;
+  margin-bottom: 0;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+  font-weight: 400;
+}
+
+/* ===========================
+   SOCIAL MEDIA BAR - COMPACT
+   =========================== */
+.social-bar {
+  width: 100%;
+  padding: 30px 20px;
+  background: transparent;
+}
+
+.social-bar-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: linear-gradient(90deg, rgba(0,0,0,0.5), rgba(127,255,212,0.15), rgba(0,0,0,0.5));
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  padding: 20px 40px;
+  border: 2px solid rgba(127,255,212,0.4);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+}
+
+.social-bar-container:hover {
+  border-color: var(--glow-color);
+  box-shadow: 0 10px 40px rgba(127,255,212,0.3);
+}
+
+.social-bar-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--glow-color);
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(127,255,212,0.5);
+}
+
+.social-bar-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-bar-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: rgba(127,255,212,0.1);
+  border: 2px solid rgba(127,255,212,0.3);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.social-bar-link:hover {
+  background: rgba(127,255,212,0.3);
+  border-color: var(--glow-color);
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 8px 20px rgba(127,255,212,0.5);
+}
+
+.social-bar-icon {
+  width: 22px;
+  height: 22px;
+  fill: var(--glow-color);
+  transition: all 0.3s ease;
+}
+
+.social-bar-link:hover .social-bar-icon {
+  fill: #fff;
+  filter: drop-shadow(0 0 6px var(--glow-color));
+}
+
+/* ===========================
    GEMSTONE BUTTONS
    =========================== */
 .gemstone-nav {
@@ -416,116 +544,6 @@ header p {
 }
 
 /* ===========================
-   ABOUT THE ARTIST SECTION
-   =========================== */
-.about-section {
-  width: 100%;
-  padding: 60px 20px;
-  background: transparent;
-}
-
-.about-container {
-  max-width: 900px;
-  margin: 0 auto;
-  background: linear-gradient(145deg, rgba(0,0,0,0.4), rgba(127,255,212,0.15));
-  backdrop-filter: blur(15px);
-  border-radius: 25px;
-  padding: 50px 40px;
-  border: 3px solid rgba(127,255,212,0.3);
-  box-shadow: 0 15px 50px rgba(0,0,0,0.5);
-  transition: all 0.4s ease;
-}
-
-.about-container:hover {
-  border-color: var(--glow-color);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 40px rgba(127,255,212,0.3);
-  transform: translateY(-5px);
-}
-
-.about-title {
-  font-family: 'Cinzel Decorative', serif;
-  font-size: 3rem;
-  font-weight: 900;
-  text-align: center;
-  color: var(--glow-color);
-  margin-bottom: 30px;
-  text-shadow: 0 0 20px var(--glow-color), 0 2px 10px rgba(0,0,0,0.8);
-  letter-spacing: 2px;
-}
-
-.about-content {
-  color: #fff;
-}
-
-.about-text {
-  font-size: 1.15rem;
-  line-height: 1.9;
-  text-align: center;
-  margin-bottom: 40px;
-  color: #fff;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
-  font-weight: 400;
-}
-
-/* Social Media Links */
-.social-links {
-  margin-top: 40px;
-  padding-top: 40px;
-  border-top: 2px solid rgba(127,255,212,0.3);
-}
-
-.social-title {
-  font-family: 'Cinzel', serif;
-  font-size: 1.8rem;
-  font-weight: 700;
-  text-align: center;
-  color: var(--glow-color);
-  margin-bottom: 25px;
-  text-shadow: 0 0 15px rgba(127,255,212,0.5);
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
-  flex-wrap: wrap;
-}
-
-.social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 60px;
-  height: 60px;
-  background: rgba(127,255,212,0.1);
-  border: 2px solid rgba(127,255,212,0.3);
-  border-radius: 15px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.social-link:hover {
-  background: rgba(127,255,212,0.25);
-  border-color: var(--glow-color);
-  transform: translateY(-5px) scale(1.1);
-  box-shadow: 0 10px 30px rgba(127,255,212,0.4);
-}
-
-.social-icon {
-  width: 30px;
-  height: 30px;
-  fill: var(--glow-color);
-  transition: all 0.3s ease;
-}
-
-.social-link:hover .social-icon {
-  fill: #fff;
-  filter: drop-shadow(0 0 8px var(--glow-color));
-}
-
-
-/* ===========================
    FOOTER LIGHT ANIMATION
    =========================== */
 #wrap {
@@ -594,6 +612,37 @@ section {
     font-size: 1.5rem;
   }
   
+  .about-container {
+    padding: 35px 25px;
+  }
+  
+  .about-title {
+    font-size: 2.2rem;
+  }
+  
+  .about-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+  
+  .social-bar-container {
+    padding: 18px 25px;
+    border-radius: 40px;
+  }
+  
+  .social-bar-title {
+    font-size: 1.1rem;
+  }
+  
+  .social-bar-icons {
+    gap: 15px;
+  }
+  
+  .social-bar-link {
+    width: 42px;
+    height: 42px;
+  }
+  
   .gemstone-nav {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
@@ -610,3 +659,35 @@ section {
   }
 }
 
+@media (max-width: 480px) {
+  .about-container {
+    padding: 25px 20px;
+  }
+  
+  .about-title {
+    font-size: 1.8rem;
+  }
+  
+  .about-text {
+    font-size: 1rem;
+  }
+  
+  .social-bar-container {
+    padding: 15px 20px;
+  }
+  
+  .social-bar-title {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+  
+  .social-bar-link {
+    width: 38px;
+    height: 38px;
+  }
+  
+  .social-bar-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
